@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet">
+  
+  <title>Frontend Mentor | Single Price Grid Component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+
+    * {
+      font-family: "Karla", sans-serif;
+      font-optical-sizing: auto;
+      font-weight: 400;
+      font-style: normal;
+      color: black;
+    }
+
+    body {
+      background-color: #1E201E;
+    }
+
+    #main-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    #center-container {
+      width: 100%;
+      height: 65%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #main-card {
+      border-radius: 10px;
+      width: 40%;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 3px 3px 18px -7px rgba(255,255,255,1);  
+      overflow: hidden;  
+    }
+
+    #first-layer {
+      border-radius: 10px 10px 0 0;
+      display: flex;
+      width: 100%;
+      height: 45%;
+      background-color: #FFFFFF;
+      flex-direction: column;
+      padding: 0;
+      margin: 0;
+    }
+
+    #second-layer {
+      border-radius: 0 0 10px 10px;
+      display: flex;
+      width: 100%;
+      height: 55%;
+    }
+
+    #second-first-layer, #second-second-layer {
+      width: 50%;
+      height: 100%;
+    }
+
+    #second-first-layer {
+      border-bottom-left-radius: 10px;
+      background-color: #4BB3B1;
+    }
+
+    #second-second-layer {
+      border-bottom-right-radius: 10px;
+      background-color: #50BEBC;
+    }
+
+    /* Para sa mga Text */
+    #first-layer h3, #first-layer p {
+      margin: 0;
+      padding: 0;
+      padding-left: 40px;
+    }
+
+    #first-layer h3 {
+      padding-top: 35px;
+      color: rgb(81,164,160);
+      font-weight: 700;
+    }
+
+    #first-layer #first-layer-p1 {
+      padding-top: 15px;
+      color: rgb(170, 207, 5);
+      font-weight: 700;
+      padding-bottom: 10px;
+      font-size: 14px;
+    }
+
+    #first-layer .first-layer-p2 {
+      padding-top: 5px;
+      color: rgba(120, 123, 129,0.75);
+      font-weight: 700;
+      font-size: 12px;
+      padding-right: 30px;
+    }
+
+    #second-first-layer p {
+      margin: 0;
+      padding: 0;
+      padding-left: 40px;
+      color: rgb(247,255,255);
+    }
+
+    #second-first-layer #second-first-p1 {
+      padding-top: 30px;
+    }
+
+    #big-29 {
+      display: flex;
+      align-items: center;
+      padding-top: 10px;
+    }
+
+    #price29 {
+    font-size: 2em; 
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 5px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    }
+
+    #second-first-layer #per-month {
+      font-size: 0.8em;
+      display: inline-flex;
+      align-items: center;
+      color: rgba(247,255,255,0.6);
+    }
+
+    #second-first-layer #second-first-p3 {
+      padding-top: 10px;
+      font-size: 12px;
+      color: rgba(247,255,255,0.7);
+    }
+
+    button {
+      margin-top: 25px;
+      margin-left: 40px;
+      width: 69%;
+      height: 18%;
+      background-color: rgb(159, 187, 35);
+      border: 0;
+      border-radius: 5px;
+      font-weight: 500;
+      color: rgb(247, 247, 247);
+      box-shadow: 3px 3px 18px -7px rgba(0,0,0,1);  
+    }
+
+    button:hover {
+      background-color: rgba(191,223,50,0.5);
+      color: rgba(245,255,182,0.5);
+      cursor: pointer;
+      transform: scale(1.02);
+
+    }
+
+    #second-second-layer p {
+      margin: 0;
+      padding: 0;
+      padding-left: 40px;
+      padding-right: 70px;
+      color: rgb(247,255,255);
+    }
+
+    #second-second-layer #why-us {
+      padding-top: 30px;
+      padding-bottom: 13px;
+    }
+
+    #second-second-layer .tutorial {
+      font-size: 12px;
+      color: rgba(247,255,255,0.6);
+      padding-top: 3px;
+    }
+
+
+    @media (max-width: 768px) { 
+      #second-layer {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      #second-first-layer, #second-second-layer {
+        width: 100%;
+        height: 100%;
+        border-radius: 0 0 0 0;
+      }
+
+      #second-second-layer {
+        border-radius: 0 0 10px 10px;
+      }
+    }
+</style>
+
+</head>
+<body>
+  <div id="main-container">
+    <div id="center-container">
+      <div id="main-card">
+        <div id="first-layer">
+          <h3>Join our community</h3>
+          <p id="first-layer-p1">30-day, hassle-free money back guarantee</p>
+          <p class="first-layer-p2">Gain access to our full library of tutorials along with expert code reviews</p>
+            <p class="first-layer-p2">Perfect for any developers who are serious about honing their skills.</p>
+        </div>
+        <div id="second-layer">
+          <div id="second-first-layer">
+            <p id="second-first-p1">Monthly Subscription</p>
+
+            <div id="big-29">
+              <p id="per-month"><span id="price29">&dollar;29</span>per month</p>
+            </div>
+
+            <p id="second-first-p3">Full access for less than &dollar;1 a day</p>
+            <button>Sign Up</button>
+          </div>
+          <div id="second-second-layer">
+            <p id="why-us">Why Us</p>
+            <p class="tutorial">Tutorials by industry experts</p>
+            <p class="tutorial">Peer &amp; expert code review</p>
+            <p class="tutorial">Coding exercises</p>
+            <p class="tutorial">Access to our GitHub repos</p>
+            <p class="tutorial">Community forum</p>
+            <p class="tutorial">Flashcard decks</p>
+            <p class="tutorial">New videos every week</p>
+              
+              
+              
+              
+              
+              
+  
+          </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
