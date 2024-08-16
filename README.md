@@ -60,6 +60,6 @@ I want to learn more about front-end web development before moving to back-end w
 
 ## Acknowledgments
 I would like to express my deepest gratitude to the following:
-- [YouTube Video Title](https://www.youtube.com/watch?v=zJSY8tbf_ys&t=69668s): For providing a comprehensive introduction to front-end development, which laid the foundation for my learning journey.
+- [Frontend Web Development Bootcamp Course (JavaScript, HTML, CSS)](https://www.youtube.com/watch?v=zJSY8tbf_ys&t=69668s): For providing a comprehensive introduction to front-end development, which laid the foundation for my learning journey.
 - Frontend Mentor: For offering a valuable platform and the opportunity to work on free challenges, helping me to practice and refine my skills.
 - My friends, family, and especially my mom: For their unwavering support and encouragement, which inspires me every day to continue learning and growing in my field.
