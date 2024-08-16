@@ -1,197 +1,206 @@
 
-     * {
-      font-family: "Karla", sans-serif;
-      font-optical-sizing: auto;
-      font-weight: 400;
-      font-style: normal;
-      color: black;
-    }
+/* ------------ Design for card ------------ */
+html { 
+  box-sizing: border-box;
+  max-height: 600px;
+}
 
-    body {
-      background-color: #1E201E;
-    }
+*, *:before, *::after {
+  box-sizing: inherit; /* For making all a border-box */
+}
 
-    #main-container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-    }
+* { /* For All Font */
+  font-family: "Karla", system-ui;
+  font-optical-sizing: auto;
+}
 
-    #center-container {
-      width: 100%;
-      height: 65%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
+body {
+  background-color: #121212;
 
-    #main-card {
-      border-radius: 10px;
-      width: 40%;
-      height: 90%;
-      display: flex;
-      flex-direction: column;
-      box-shadow: 3px 3px 18px -7px rgba(255,255,255,1);  
-      overflow: hidden;  
-    }
+  height: 100vh; /* Making the height of the body 100%
+                    of the viewport height for vertical
+                    center alignment of the content.    */
 
-    #first-layer {
-      border-radius: 10px 10px 0 0;
-      display: flex;
-      width: 100%;
-      height: 45%;
-      background-color: #FFFFFF;
-      flex-direction: column;
-      padding: 0;
-      margin: 0;
-    }
+  /* Making the body element a flexbox */
+  display: flex;
+  justify-content: center; /*For making the content center horizontally*/
+  align-items: center; /* For making the items center vertically  */
+}
 
-    #second-layer {
-      border-radius: 0 0 10px 10px;
-      display: flex;
-      width: 100%;
-      height: 55%;
-    }
+.card {
+  /* For desiging the card div */
+  width: 240px;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 3px 3px 14px 0px rgba(255, 255, 255, .3);
 
-    #second-first-layer, #second-second-layer {
-      width: 50%;
-      height: 100%;
-    }
+  /* Making the card div a flexbox */
+  display: flex;
+  flex-direction: column;
+}
 
-    #second-first-layer {
-      border-bottom-left-radius: 10px;
-      background-color: #4BB3B1;
-    }
+.content {
+  /* For designing the contents div */
+  width: 100%;
+  height: auto;
+  padding: 18px;
+}
 
-    #second-second-layer {
-      border-bottom-right-radius: 10px;
-      background-color: #50BEBC;
-    }
+.content-1 {
+  /* For designing the first content div */
+  background-color: #FFFFFF;
+  height: auto;
+  border-radius: 5px 5px 0 0;
+}
 
-    /* Para sa mga Text */
-    #first-layer h3, #first-layer p {
-      margin: 0;
-      padding: 0;
-      padding-left: 40px;
-    }
+.content-2 {
+  /* For designing the second content div */
+  background-color: #3da1a0;
+}
 
-    #first-layer h3 {
-      padding-top: 35px;
-      color: rgb(81,164,160);
-      font-weight: 700;
-    }
+.content-3 {
+  /* For designing the third content div */
+  background-color: #50BEBD;
+  border-radius: 0 0 5px 5px;
+}
 
-    #first-layer #first-layer-p1 {
-      padding-top: 15px;
-      color: rgb(170, 207, 5);
-      font-weight: 700;
-      padding-bottom: 10px;
-      font-size: 14px;
-    }
+/* ------------ For Text of Contents ------------ */
+h4, p, ul {
+  margin: 0;
+  padding: 0;
+}
 
-    #first-layer .first-layer-p2 {
-      padding-top: 5px;
-      color: rgba(120, 123, 129,0.75);
-      font-weight: 700;
-      font-size: 12px;
-      padding-right: 30px;
-    }
+/* For First Content Texts */
 
-    #second-first-layer p {
-      margin: 0;
-      padding: 0;
-      padding-left: 40px;
-      color: rgb(247,255,255);
-    }
+.content-1-h4 {
+  font-size: .90em;
+  margin-bottom: 15px;
+  color: #3da1a0;
+}
 
-    #second-first-layer #second-first-p1 {
-      padding-top: 30px;
-    }
+.content-1-p1 {
+  margin-bottom: 15px;
+  font-size: .70em;
+  color: #9bb904;
+  font-weight: 700;
+}
 
-    #big-29 {
-      display: flex;
-      align-items: center;
-      padding-top: 10px;
-    }
+.content-1-p2 {
+  line-height: 180%;
+  font-size: .65em;
+  color: #a9aaaa;
+  font-weight: 700;
+}
 
-    #price29 {
-    font-size: 2em; 
-    display: inline-block;
-    vertical-align: middle;
-    margin-right: 5px;
-    font-weight: 500;
-    color: rgb(255, 255, 255);
-    }
+/* For Second Content Texts */
+.content-2-h4 {
+  font-size: .9em;
+  color: #ffffffd2;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
 
-    #second-first-layer #per-month {
-      font-size: 0.8em;
-      display: inline-flex;
-      align-items: center;
-      color: rgba(247,255,255,0.6);
-    }
+.content-2-p1 .content-2-span {
+  color: #ffffffe1;
+  font-size: 2em;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 5px;
+}
 
-    #second-first-layer #second-first-p3 {
-      padding-top: 10px;
-      font-size: 12px;
-      color: rgba(247,255,255,0.7);
-    }
+.content-2-p1 { 
+  color: #ffffff56;
+  font-weight: 500;
+  font-size: .75em;
+  margin-bottom: 2px;
+}
 
-    button {
-      margin-top: 25px;
-      margin-left: 40px;
-      width: 69%;
-      height: 18%;
-      background-color: rgb(159, 187, 35);
-      border: 0;
-      border-radius: 5px;
-      font-weight: 500;
-      color: rgb(247, 247, 247);
-      box-shadow: 3px 3px 18px -7px rgba(0,0,0,1);  
-    }
+.content-2-p2 {
+  color: #ffffff8c;
+  font-size: .75em;
+  font-weight: 600;
+  margin-bottom: 25px;
+}
 
-    button:hover {
-      background-color: rgba(191,223,50,0.5);
-      color: rgba(245,255,182,0.5);
-      cursor: pointer;
-      transform: scale(1.02);
+.content-2-button {
+  width: 100%;
+  height: 35px;
+  border: 0px none;
+  border-radius: 5px;
+  font-size: .75em;
+  font-weight: 600;
+  color: #FFFFFF;
+  background-color: #9bb904;
+  box-shadow: 3px 3px 14px 0px rgba(0, 0, 0, 0.288);
+}
+.content-2-button:hover {
+  cursor: pointer;
+  background-color: #9bb90491;
+}
 
-    }
+/* For Third Content Texts */
+.content-3-h4 {
+  font-size: .9em;
+  color: #ffffffda;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
 
-    #second-second-layer p {
-      margin: 0;
-      padding: 0;
-      padding-left: 40px;
-      padding-right: 70px;
-      color: rgb(247,255,255);
-    }
+.content-3-ul {
+  list-style: none;
+  font-size: .65em;
+  font-weight: 500;
+  color: #ffffff96;
+}
 
-    #second-second-layer #why-us {
-      padding-top: 30px;
-      padding-bottom: 13px;
-    }
-
-    #second-second-layer .tutorial {
-      font-size: 12px;
-      color: rgba(247,255,255,0.6);
-      padding-top: 3px;
-    }
+.content-3-ul li {
+  margin-bottom: 2px;
+}
 
 
-    @media (max-width: 768px) { 
-      #second-layer {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-      }
+/* ------------ For Responsiveness ------------ */
+@media(min-width: 600px) {
+  /* If the body width is greater than or equals to 600px */
 
-      #second-first-layer, #second-second-layer {
-        width: 100%;
-        height: 100%;
-        border-radius: 0 0 0 0;
-      }
+  .card {
+    width: 480px;
+    flex-direction: row; /* Making the flex direction into row */
+    flex-wrap: wrap;
+  }
 
-      #second-second-layer {
-        border-radius: 0 0 10px 10px;
-      }
-    }
+  .content {
+    padding: 30px;
+  }
+
+  .content-1 {
+    width: 100%;
+    /* height: 180px; */
+  }
+
+  .content-1-h4 {
+    font-size: 1.1em;
+  }
+
+  .content-1-p1 {
+    margin-bottom: 10px;
+    font-size: .85em;
+  }
+
+  .content-1-p2 {
+    line-height: 140%;
+    font-size: .75em;
+  }
+
+  .content-2, .content-3 {
+  width: 50% ;
+  }
+
+  .content-2 {
+    border-radius: 0 0 0 5px;
+  }
+
+  .content-3 {
+    border-radius: 0 0 5px 0;
+  }
+
+}
